@@ -148,3 +148,10 @@ console.log(num);
 
 // operators - concatenation
 console.log('HI ' + 'THERE');
+
+// operators - comparison
+// ==  (equal value), !=
+// === (equal value & type), !==
+// >, <, >=, <=
+console.log('25' == 25); // true
+console.log('25' === 25); // false
