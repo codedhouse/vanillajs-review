@@ -112,7 +112,7 @@ console.log(phoneNumber, typeof phoneNumber); // typeof shows 'object' but it is
 let totalAmount;
 const orderNumber = undefined;
 
-// data types = reference
+// data types - reference
 // array
 const tasks = ['get gas', 'buy groceries', 'send package'];
 console.log(tasks, typeof tasks);
@@ -133,3 +133,18 @@ console.log(countdown, typeof countdown); // typeof shows 'function' since it is
 const player = contact;
 player.firstName = 'Charlotte';
 console.log(player.firstName, contact.firstName);
+
+// operators - arithmetic
+// +, - , *, / , %, **, ++, --
+let num = 79;
+const div = num / 3;
+console.log(div);
+console.log(num ** 2);
+num++;
+console.log(num);
+
+// operators - assignment
+// =, +=, -=, *=, /=, %=,
+
+// operators - concatenation
+console.log('HI ' + 'THERE');
