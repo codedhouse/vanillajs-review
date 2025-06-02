@@ -15,6 +15,13 @@ console.log(numbers.slice(2));
 // Get part of array from start index to end index
 console.log(numbers.slice(2, 4)); // excludes numbers[4]
 
+// Destructure - assign values to vars
+console.log(numbers);
+const [first, second, third] = numbers;
+console.log(first, second, third);
+const [first2, second2, ...rest] = numbers;
+console.log(first2, second2, rest);
+
 // Reverse order
 numbers.reverse();
 console.log(numbers);
