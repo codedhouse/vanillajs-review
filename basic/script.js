@@ -116,6 +116,16 @@ const orderNumber = undefined;
 // array
 const tasks = ['get gas', 'buy groceries', 'send package'];
 console.log(tasks, typeof tasks);
+
+const wishlist = new Array('shoes', 'bike', 'car');
+console.log(wishlist);
+wishlist[1] = 'board game';
+console.log(wishlist);
+
+const randomStuff = [148, '9th', false];
+
+let myStuff = new Array();
+console.log(myStuff.length);
 // object
 const contact = {
   firstName: 'Hannah',
