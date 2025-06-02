@@ -60,6 +60,20 @@ console.log(Object.keys(todo).length);
 // Get all key-value pairs
 console.log(Object.entries(todo));
 
+// Get object in JSON format
+const recipe = {
+  id: 1,
+  recipeName: 'bacon and cheese omelet',
+  level: 'easy',
+  prepTimeInMins: 20,
+};
+const recipeStr = JSON.stringify(recipe);
+console.log(recipeStr);
+
+// Convert JSON to object
+const recipeObj = JSON.parse(recipeStr);
+console.log(recipeObj);
+
 // Call functions
 todo.toString();
 
@@ -94,3 +108,7 @@ const colors = [
   { id: 3, name: 'reddish brown' },
   { id: 4, name: 'dark bluish gray' },
 ];
+
+const colorsStr = JSON.stringify(colors);
+console.log(colorsStr);
+console.log(JSON.parse(colorsStr));
