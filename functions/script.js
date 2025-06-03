@@ -37,6 +37,25 @@ const getStudent = () => ({
   age: '11',
 });
 
+// Immediately invoked function expression (IIFE)
+(function () {
+  const greeting = 'Hello from unnamed function.';
+  console.log(greeting);
+})();
+
+(function (name) {
+  const namedGreeting = `Hello ${name} from unnamed function 2.`;
+  console.log(namedGreeting);
+})('Liz');
+
+// IIFE can have a name, which can be useful for recursion or debugging
+(function getRandomNum() {
+  const random = Math.floor(Math.random() * 100);
+  console.log(`Here is a random number: ${random}`);
+  if (random < 20) return;
+  getRandomNum();
+})();
+
 const w = 100;
 console.log(w);
 
