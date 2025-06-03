@@ -30,14 +30,15 @@ Multi-line comment */
 // variable names: can have letters, numbers, underscores, and dollar signs
 // variable names can't start with a number
 
-// var
+// var (function scoped, not block scoped)
+// var gets added to the Window object (let & const don't get added)
 var message;
 message = 'Good day';
 console.log(message, myVar); // myVar = undefined
 var myVar = 787;
 message = 'Goodbye';
 
-// let
+// let (similar to var but block scoped)
 let city = 'Beverly Hills';
 let zipCode;
 console.log(city, zipCode); // zipCode = undefined
