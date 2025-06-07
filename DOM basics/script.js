@@ -18,7 +18,17 @@ console.log(document.URL)
 
 // get single element by using methods (current way)
 console.dir(document.getElementById('main'))
+
+// querySelector() returns only the first match
+console.log(document.querySelector('#main')) // similar to getElementById
+console.log(document.querySelector('.content')) // by class
+const listItem = document.querySelector('li') // returns first li
+// console.log('list item: ' + listItem.innerText)
 console.log(document.querySelector('#main ul')) // returns a node list
+
+// pseudo selectors
+const listItem2 = document.querySelector('li:nth-child(2)') // returns 2nd li
+// console.log(listItem2.innerHTML)
 
 // get attribute of single element
 const mainContainer = document.getElementById('main')
