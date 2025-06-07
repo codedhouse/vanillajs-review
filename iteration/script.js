@@ -15,6 +15,24 @@ for (let i = 0; i <= 10; i++) {
   }
 }
 
+// While loop
+let i = 0
+
+while (i < 5) {
+  console.log(i + 1)
+  i++
+}
+
+// Do... While loop
+let d = 0
+
+do {
+  const x = Math.floor(Math.random() * 27)
+  const dx = d * x
+  console.log(`do... ${d} * ${x} = ${dx}`)
+  d++
+} while (d < 30)
+
 // Break & Continue
 for (let i = 0; i < 10; i++) {
   const num = 2 ** i
