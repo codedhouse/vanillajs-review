@@ -51,3 +51,13 @@ for (let i = 0; i < 10; i++) {
   }
   console.log(`num doubled: ${num * 2}`)
 }
+
+// Fizz Buzz
+for (let i = 1; i <= 100; i++) {
+  let msg = i % 3 === 0 ? 'Fizz' : i.toString()
+  if (i % 5 === 0) {
+    if (msg === 'Fizz') msg += 'Buzz'
+    else msg = 'Buzz'
+  }
+  console.log(msg)
+}
