@@ -10,9 +10,44 @@ document = document object
 // console.log(document) // equivalent to console.log(window.document); log() may only show the document
 console.dir(document) // dir() shows document properties & methods
 
-// get element by using methods (current way)
+// get document properties
+console.log(document.characterSet)
+console.log(document.contentType)
+console.log(document.doctype)
+console.log(document.URL)
+
+// get single element by using methods (current way)
 console.dir(document.getElementById('main'))
 console.log(document.querySelector('#main ul')) // returns a node list
+
+// get attribute of single element
+const mainContainer = document.getElementById('main')
+console.log(mainContainer.id)
+console.log(mainContainer.getAttribute('id'))
+console.log(mainContainer.className)
+console.log(mainContainer.getAttribute('class'))
+
+// get content of single element
+console.log(document.getElementById('page-title').innerText)
+console.log(document.getElementById('page-title').textContent)
+
+// set attribute of single element
+document.getElementById('external-links').id = 'ext-links'
+document.getElementById('ext-links').setAttribute('id', 'ext-links2')
+// console.log(document.getElementById('ext-links2').id)
+document.getElementById('main').className = 'new class'
+console.log(document.getElementById('main').getAttribute('class'))
+
+// set content of single element
+// document.body.innerHTML = '<h1>No Links</h1>'
+// const main = document.getElementById('main')
+// main.innerHTML = '<h1>New Header</h1>'
+// document.getElementById('page-title').textContent = 'My App' // similar to innerText
+document.querySelector('#main h1').innerText = 'Home'
+
+// set style of single element
+mainContainer.style.backgroundColor = 'pink'
+mainContainer.style.padding = '12px 35px'
 
 // get element by using properties (old way)
 console.log(document.documentElement) // returns <html> element
@@ -23,18 +58,6 @@ console.log(document.body.children) // returns HTMLCollection of direct children
 
 // get element attributes
 console.log(document.querySelector('div').id)
-
-// get document properties
-console.log(document.characterSet)
-console.log(document.contentType)
-console.log(document.doctype)
-console.log(document.URL)
-
-// modify element html
-// document.body.innerHTML = '<h1>No Links</h1>'
-// const main = document.getElementById('main')
-// main.innerHTML = '<h1>New Header</h1>'
-const header = (document.querySelector('#main h1').innerText = 'Home')
 
 // get all links
 console.log(document.links) // returns HTMLCollection
