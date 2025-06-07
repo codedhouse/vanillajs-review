@@ -12,7 +12,7 @@ console.dir(document) // dir() shows document properties & methods
 
 // get element by using methods (current way)
 console.dir(document.getElementById('main'))
-console.log(document.querySelector('#main ul'))
+console.log(document.querySelector('#main ul')) // returns a node list
 
 // get element by using properties (old way)
 console.log(document.documentElement) // returns <html> element
@@ -43,3 +43,6 @@ console.log(document.links) // returns HTMLCollection
 console.log(document.links[0])
 console.log(document.body.children[1])
 document.links[1].innerText = 'Reddit!'
+
+// get array of HTMLCollection elements (useful for array methods)
+console.log(Array.from(document.links))
