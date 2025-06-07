@@ -1,6 +1,6 @@
 // Iteration
 
-// Arrays
+// Array methods
 const minsPracticed = [30, 120, 15, 45, 20, 0, 55]
 
 // Arrow function in callback
@@ -13,6 +13,39 @@ for (let i = 0; i <= 10; i++) {
   for (let j = 10; j >= 0; j--) {
     console.log(`${j}Z`)
   }
+}
+
+// For... Of loop
+const parts = ['brick', 'pin', 'plate', 'slope', 'tile']
+for (const part of parts) {
+  console.log(`part: ${part}`)
+}
+
+const map = new Map()
+map.set('id', '321')
+map.set('color', 'poppy red')
+
+for (const [key, value] of map) {
+  console.log(key, value)
+}
+
+// For... in loop (often used with objects)
+const mealPlan = {
+  breakfast: 'omelet',
+  snack1: 'sunflower seeds',
+  lunch: 'chicken soup',
+  snack2: 'nuts',
+  dinner: 'pancakes',
+}
+
+for (const key in mealPlan) {
+  console.log(key, mealPlan[key])
+}
+
+const spices = ['cinnamon', 'cumin', 'chili powder', 'oregano', 'marjoram']
+for (const spice in spices) {
+  console.log(spice) // spice = key (array index, not the value)
+  console.log(spices[spice])
 }
 
 // While loop
