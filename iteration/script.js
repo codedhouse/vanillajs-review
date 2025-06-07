@@ -1,10 +1,26 @@
 // Iteration
 
-// Array methods
+// Array methods: forEach(callback function)
+// Callback - a function passed as an arg to another function
 const minsPracticed = [30, 120, 15, 45, 20, 0, 55]
-
-// Arrow function in callback
 minsPracticed.forEach((m) => console.log(m))
+minsPracticed.forEach((m, index) => console.log(`${index} - ${m}`))
+minsPracticed.forEach((m, index, arr) => console.log(`${index} - ${m}`, arr))
+// Pass a named function
+function logMins(mins) {
+  console.log(mins + ' mins')
+}
+
+minsPracticed.forEach(logMins)
+
+// Object arrays
+const tour = [
+  { city: 'Los Angeles', state: 'CA' },
+  { city: 'Taos', state: 'NM' },
+  { city: 'Chicago', state: 'IL' },
+]
+
+tour.forEach((place) => console.log(place.state))
 
 // Loops can be nested any number of levels
 // For loop
