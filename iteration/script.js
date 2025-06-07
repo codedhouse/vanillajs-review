@@ -1,6 +1,6 @@
 // Iteration
 
-// Array methods: forEach(callback function)
+// Array methods: forEach(callback function) - returns nothing
 // Callback - a function passed as an arg to another function
 const minsPracticed = [30, 120, 15, 45, 20, 0, 55]
 minsPracticed.forEach((m) => console.log(m))
@@ -21,6 +21,26 @@ const tour = [
 ]
 
 tour.forEach((place) => console.log(place.state))
+
+// Array methods - filter(function) - returns array
+const years = [2014, 1984, 1994, 2000, 2012]
+const after2000 = years.filter((year) => year > 2000)
+console.log(after2000)
+
+const partyMembers = [
+  { name: 'sophie', level: 14, class: 'white mage', maxHP: 89 },
+  { name: 'tanaqui', level: 17, class: 'rogue', maxHP: 119 },
+  { name: 'crusher', level: 25, class: 'warrior', maxHP: 212 },
+  { name: 'merlin', level: 31, class: 'wizard', maxHP: 190 },
+  { name: 'darwin', level: 13, class: 'engineer', maxHP: 100 },
+]
+
+const highHPandLevel = partyMembers.filter(
+  (member) => member.maxHP >= 100 && member.level > 20
+)
+console.log(highHPandLevel)
+
+// Array methods - map(function)
 
 // Loops can be nested any number of levels
 // For loop
