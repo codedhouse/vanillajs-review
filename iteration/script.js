@@ -40,7 +40,35 @@ const highHPandLevel = partyMembers.filter(
 )
 console.log(highHPandLevel)
 
-// Array methods - map(function)
+// Array methods - map(function) - returns array
+const newParty = partyMembers.map((member) => ({
+  name: member.name,
+  newLevel: member.level + 1,
+}))
+console.log(newParty)
+
+// Array methods - reduce(function(accumulator, currentValue), initialValue) - returns value
+const playlist = [
+  { order: 1, title: 'track 1', mins: 4, secs: 44 },
+  { order: 2, title: 'track 2', mins: 2, secs: 57 },
+  { order: 3, title: 'track 3', mins: 4, secs: 1 },
+  { order: 4, title: 'track 4', mins: 3, secs: 32 },
+  { order: 5, title: 'track 5', mins: 4, secs: 5 },
+]
+
+const totalSecs = playlist.reduce((acc, track) => {
+  return acc + track.mins * 60 + track.secs
+}, 0)
+const plMins = Math.floor(totalSecs / 60)
+const plSecs = totalSecs % 60
+console.log(`${plMins}m ${plSecs}s`)
+
+const someNums = [3, 1, 98, 12]
+console.log(
+  someNums.reduce((acc, num) => {
+    return acc + num * 2
+  }, 0)
+)
 
 // Loops can be nested any number of levels
 // For loop
