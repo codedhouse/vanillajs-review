@@ -79,3 +79,10 @@ document.links[1].innerText = 'Reddit!'
 
 // get array of HTMLCollection elements (useful for array methods)
 console.log(Array.from(document.links))
+
+// get multiple elements
+// querySelectorAll() is the most common way
+// console.log(document.querySelectorAll('ul')) // returns NodeList (array-like)
+const allLists = document.querySelectorAll('ul')
+allLists[0].style.color = 'red' // change bullet color
+allLists.forEach((l) => (l.style.backgroundColor = 'yellow'))
